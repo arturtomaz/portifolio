@@ -1,0 +1,357 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: #f8f8f8;
+}
+
+/* --- CLASSE PARA SOMBRA EM DEGRADÊ COM HOVER --- */
+.gradient-shadow {
+  position: relative; /* Essencial para o posicionamento do ::before */
+  /* Adicione uma transição aqui para o elemento pai, se ele também for se mover */
+  transition: all 0.3s ease-in-out; /* Exemplo: para um efeito de "levitar" */
+  opacity: 0.9;
+}
+
+.gradient-shadow::before {
+  content: ""; /* Propriedade obrigatória para pseudo-elementos */
+  position: absolute;
+  /* Centraliza a sombra um pouco mais se quiser que vaze igualmente em todas as direções */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.05); /* Começa um pouco maior que o elemento, mas centralizado */
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Posiciona a sombra atrás do elemento principal */
+
+  /* O DEGRADÊ DA SOMBRA */
+  background: linear-gradient(
+    to right,
+    #35605a,
+    #88b876,
+    #cdeb85
+  ); /* Suas cores de degradê */
+
+  /* ESTADO NORMAL DA SOMBRA */
+  filter: blur(
+    10px
+  ); /* Aumente o blur para criar o efeito de vazamento suave */
+  opacity: 0.8; /* Reduza a opacidade inicial para que o "vazamento" seja sutil */
+
+  /* TRANSIÇÃO DAS PROPRIEDADES NO HOVER */
+  /* Removi 'filter' da transição para que o blur seja fixo */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* ESTADO HOVER: O que acontece quando o mouse está sobre .gradient-shadow */
+.gradient-shadow:hover::before {
+  opacity: 1; /* Aumenta a opacidade no hover para destacar a sombra que "vaza" */
+  transform: translate(-50%, -50%) scale(1.1); /* Opcional: faz a sombra crescer sutilmente mais no hover */
+}
+
+/* Opcional: Efeito de "levitar" para o próprio elemento no hover */
+.gradient-shadow:hover {
+  transform: translateY(-3px); /* Faz o elemento "subir" um pouco */
+  opacity: 1;
+}
+
+/* ANIMAÇÃO ESCREVENDO - SINCRONIA AJUSTADA */
+.txt-animado span {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: escreverApagar 25s linear infinite;
+}
+
+.txt-animado span::before {
+  content: "Desenvolvedor Web";
+  animation: palavras 25s steps(1, end) infinite;
+  color: #f8f8f8;
+  padding-right: 10px;
+}
+
+.txt-animado span::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  min-width: 4px;
+  max-width: 4px;
+  background-image: linear-gradient(to bottom, #cdeb85, #88b876, #35605a);
+  animation: cursorEscreve 25s ease-in infinite;
+}
+
+@keyframes cursorEscreve {
+  0% {
+    width: 0;
+  }
+  5% {
+    width: 100%;
+  }
+  15% {
+    width: 100%;
+  }
+  20% {
+    width: 0;
+  }
+
+  25% {
+    width: 100%;
+  }
+  35% {
+    width: 100%;
+  }
+  40% {
+    width: 0;
+  }
+
+  45% {
+    width: 100%;
+  }
+  55% {
+    width: 100%;
+  }
+  60% {
+    width: 0;
+  }
+
+  65% {
+    width: 100%;
+  }
+  75% {
+    width: 100%;
+  }
+}
+
+@keyframes palavras {
+  0% {
+    content: "Desenvolvedor Web";
+  }
+  20% {
+    content: "Engenheiro de Software";
+  }
+  40% {
+    content: "Estudante de Computação";
+  }
+  60% {
+    content: "Entusiasta de Tecnologia";
+  }
+  80% {
+    content: "Programador Full Stack";
+  }
+  100% {
+    content: "Desenvolvedor Web";
+  }
+}
+
+@keyframes escreverApagar {
+  0% {
+    width: 0;
+  }
+  5% {
+    width: 100%;
+  }
+  15% {
+    width: 100%;
+  }
+  20% {
+    width: 0;
+  }
+
+  25% {
+    width: 100%;
+  }
+  35% {
+    width: 100%;
+  }
+  40% {
+    width: 0;
+  }
+
+  45% {
+    width: 100%;
+  }
+  55% {
+    width: 100%;
+  }
+  60% {
+    width: 0;
+  }
+
+  65% {
+    width: 100%;
+  }
+  75% {
+    width: 100%;
+  }
+  80% {
+    width: 0;
+  }
+
+  85% {
+    width: 100%;
+  }
+  95% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+/* BUBBLES */
+.blob-cont {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 400px;
+  height: 400px;
+
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.8;
+  overflow: visible;
+}
+
+.blob {
+  border-radius: 50%;
+  filter: blur(80px);
+  position: absolute;
+}
+
+.green {
+  background-color: #88b876;
+  top: 50%;
+  left: 30%;
+  height: 150px;
+  width: 150px;
+  animation: green 10s infinite alternate ease-in-out;
+}
+
+.dark-green {
+  background-color: #35605a;
+  top: 20%;
+  right: 30%;
+  height: 130px;
+  width: 180px;
+  animation: dark-green 12s infinite alternate ease-in-out;
+}
+
+.light-green {
+  background-color: #cdeb85;
+  top: 70%;
+  right: 20%;
+  height: 130px;
+  width: 130px;
+  animation: light-green 14s infinite alternate ease-in-out;
+}
+
+@keyframes green {
+  0% {
+    top: 45%;
+    left: 25%;
+    transform: scale(1);
+  }
+  15% {
+    top: 60%;
+    left: 15%;
+    transform: scale(1.1);
+  } /* Descendo para a esquerda, mas não tão longe */
+  35% {
+    top: 30%;
+    left: 50%;
+    transform: scale(1.3);
+  } /* Subindo para a direita, mais contido */
+  55% {
+    top: 70%;
+    left: 35%;
+    transform: scale(1.05);
+  } /* Descendo novamente, mais centralizado */
+  75% {
+    top: 20%;
+    left: 15%;
+    transform: scale(1.25);
+  } /* Indo para o canto superior esquerdo, mais próximo */
+  100% {
+    top: 45%;
+    left: 25%;
+    transform: scale(1);
+  }
+}
+
+@keyframes dark-green {
+  0% {
+    top: 15%;
+    right: 25%;
+    transform: scale(1.1);
+  }
+  15% {
+    top: 10%;
+    right: 40%;
+    transform: scale(0.95);
+  } /* Indo para o canto superior direito, mais contido */
+  35% {
+    top: 50%;
+    right: 15%;
+    transform: scale(1.2);
+  } /* Descendo para a esquerda, oposta à verde */
+  55% {
+    top: 30%;
+    right: 35%;
+    transform: scale(1.05);
+  } /* Subindo, cruzando a verde, mais central */
+  75% {
+    top: 60%;
+    right: 20%;
+    transform: scale(1.15);
+  } /* Indo para o canto inferior esquerdo, mais próximo */
+  100% {
+    top: 15%;
+    right: 25%;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes light-green {
+  0% {
+    top: 65%;
+    right: 15%;
+    transform: scale(1);
+  }
+  15% {
+    top: 50%;
+    right: 10%;
+    transform: scale(1.2);
+  } /* Subindo para a direita, se aproximando da verde */
+  35% {
+    top: 80%;
+    right: 30%;
+    transform: scale(1.35);
+  } /* Descendo para o canto inferior direito, mais contido */
+  55% {
+    top: 20%;
+    right: 15%;
+    transform: scale(1.1);
+  } /* Indo para o canto superior esquerdo, cruzando */
+  75% {
+    top: 40%;
+    right: 40%;
+    transform: scale(1.25);
+  } /* Indo para o centro-direita, se unindo às outras */
+  100% {
+    top: 65%;
+    right: 15%;
+    transform: scale(1);
+  }
+}
