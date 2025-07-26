@@ -3,7 +3,7 @@ import TecnologiaHero from "../components/TecnologiaHero";
 
 function HeroArea() {
   return (
-    <div className="h-fit flex flex-col lg:flex-row items-center justify-between pb-[200px]">
+    <div className="h-fit flex flex-col lg:flex-row items-center justify-between pb-[100px]">
       {/* ESQUERDA */}
       <div className="flex-1 flex flex-col h-[100%] gap-5">
         {/* Hero Title */}

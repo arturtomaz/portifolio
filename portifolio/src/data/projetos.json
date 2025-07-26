@@ -1,0 +1,89 @@
+{
+  "projetos": [
+    {
+      "id": 1,
+      "nome": "Portfolio Website",
+      "descricao": "",
+      "tecnologias": ["React"],
+      "deploy": "",
+      "github": "",
+      "caminho": "portifolio",
+      "imagens": ["home.png"]
+    },
+    {
+      "id": 2,
+      "nome": "Acomodações",
+      "descricao": "O projeto consiste em uma aplicação web que permite aos usuários visualizarem acomodações disponíveis e acessarem detalhes específicos. Desenvolvi o frontend em React e o backend em FastAPI, garantindo uma experiência fluida e responsiva.",
+      "tecnologias": [
+        "Javascript",
+        "React",
+        "Python",
+        "FastAPI",
+        "JSON",
+        "Docker",
+        "Tailwind CSS"
+      ],
+      "deploy": "acomodacoes.vercel.app",
+      "github": "Acomodacoes",
+      "caminho": "acomodacoes",
+      "imagens": [
+        "home.png",
+        "desktop-list.png",
+        "perfil.png",
+        "mobile-list.png"
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "To-do List",
+      "descricao": "Esta é uma aplicação de To-Do List desenvolvido com React, projetado para adicionar, visualizar e excluir tarefas de forma simples e eficiente.",
+      "tecnologias": ["Javascript", "React", "Tailwind CSS", "Local Storage"],
+      "deploy": "arturtomaz-to-do-react.vercel.app",
+      "github": "to-do-react",
+      "caminho": "to-do-list",
+      "imagens": ["home.png", "details.png"]
+    },
+    {
+      "id": 4,
+      "nome": "Cadastro de Usuários",
+      "descricao": "Este é um sistema de cadastro de usuários composto por um frontend e um backend, permitindo gerenciar registros de maneira eficiente.",
+      "tecnologias": [
+        "Javascript",
+        "React",
+        "Tailwind CSS",
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "deploy": "cadastro-frontend.vercel.app",
+      "github": "cadastro-frontend",
+      "caminho": "cadastro-usuarios",
+      "imagens": ["home.png"]
+    },
+    {
+      "id": 5,
+      "nome": "Burger Web",
+      "descricao": "Uma landing page simples e responsiva para uma hamburgueria, criada com React e estilizada com CSS puro. O projeto foca exclusivamente na interface visual, sem integração com backend. Este projeto foi desenvolvido como parte do curso HTML5 e CSS3 da B7Web. No curso, a implementação é feita apenas com HTML e CSS, mas optei por recriá-lo utilizando React para maior organização.",
+      "tecnologias": ["Javascript", "React", "CSS", "JSON"],
+      "deploy": "burger-web-project.vercel.app",
+      "github": "burger-web",
+      "caminho": "burgerweb",
+      "imagens": ["home.png", "search.png", "mobile.png"]
+    },
+    {
+      "id": 6,
+      "nome": "Pizzaria",
+      "descricao": "Frontend de um sistema web para pedidos de uma pizzaria, incluindo uma interface de usuário responsiva e interativa.",
+      "tecnologias": ["Javascript", "HTML", "CSS", "JSON"],
+      "deploy": "arturtomaz.github.io/Pizzaria/",
+      "github": "Pizzaria",
+      "caminho": "pizzaria",
+      "imagens": [
+        "desktop.png",
+        "carrinho-desktop.png",
+        "mobile.png",
+        "carrinho-mobile.png"
+      ]
+    }
+  ]
+}
