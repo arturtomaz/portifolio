@@ -9,16 +9,16 @@ function BotaoPortifolio(props) {
   const isActive = props.ativo.toLowerCase() === tipo;
 
   return (
-    <div onClick={() => props.onClick(tipo)} className={`group flex flex-col flex-1 items-center justify-center py-4 rounded-[15px] ${isActive ? "text-[#F8F8F8]" : "text-[#A7A7A7]"} hover:text-[#F8F8F8] ${isActive ? "bg-[#88B876]/15" :  "bg-[#88B876]/0"} hover:bg-[#88B876]/10 transition-colors duration-200 cursor-pointer`}>
+    <div onClick={() => props.onClick(tipo)} className={`group relative flex flex-col flex-1 items-center justify-center px-2 py-4 rounded-[15px] ${isActive ? "text-[#F8F8F8]" : "text-[#A7A7A7]"} hover:text-[#F8F8F8] ${isActive ? "bg-[#88B876]/15" :  "bg-[#88B876]/0"} hover:bg-[#88B876]/10 transition-colors duration-200 cursor-pointer`}>
       <svg
-        className="w-[25px] h-[25px] group-hover:scale-[1.1] group-hover:rotate-[8deg] group-hover:translate-y-[-5px] transition-transform duration-200 ease-in-out"
+        className="w-[20px] h-[20px] sm:w-[25px] sm:h-[25px] group-hover:scale-[1.1] group-hover:rotate-[8deg] group-hover:translate-y-[-5px] transition-transform duration-200 ease-in-out"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="none"
         dangerouslySetInnerHTML={{ __html: svgs[tipo] || "" }}
       />
-      <h1 className="group-hover:translate-y-[-5px] font-extrabold text-[18px] transition-transform duration-200 ease-in-out">{props.nome}</h1>
+      <h1 className="group-hover:translate-y-[-5px] font-extrabold text-[12px] sm:text-[18px] transition-transform duration-200 ease-in-out">{props.nome}</h1>
     </div>
   );
 }

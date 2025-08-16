@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Projeto(props) {
   const p = props.projeto;
   return (
-    <div className="group h-[100%] z-0 p-5 rounded-[15px] bg-[#2e3a2f] transition-colors duration-200 border-[2px] border-[transparent] hover:border-[#88B876]">
+    <div className="group h-[100%] p-5 rounded-[15px] bg-[#2e3a2f] transition-colors duration-200 border-[2px] border-[transparent] hover:border-[#88B876]">
       <div className="overflow-hidden rounded-[15px] h-[170px]">
         <img
           className="w-full h-full object-cover content-center text-center transition-transform duration-300 transform origin-center group-hover:scale-110"
@@ -23,17 +23,15 @@ function Projeto(props) {
           </p>
         </div>
         {/* Botões */}
-        <div className="mt-5 flex items-center justify-between">
+        <div className="text-[13px] sm:text-[16px] mt-5 flex items-center justify-between">
           <a
-            className="flex items-center text-[#51A2FF] hover:brightness-140 transition-all duration-200"
+            className="flex items-center text-[#51A2FF] gap-1 hover:brightness-140 transition-all duration-200"
             href={`https://${p.deploy}`}
             target="_blank"
           >
             Site Demo
             <svg
-            className="ml-2"
-              width="18px"
-              height="18px"
+            className="w-[15px] h-[15px] sm:w-[18px] sm:h-[18px]"
               viewBox="0 0 52 52"
               fill="#51A2FF"
               xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +40,7 @@ function Projeto(props) {
               <path d="M36.3,25.5L32.9,29c-0.6,0.6-0.9,1.3-0.9,2.1v11.4c0,0.8-0.7,1.5-1.5,1.5h-21C8.7,44,8,43.3,8,42.5v-21C8,20.7,8.7,20,9.5,20H21c0.8,0,1.6-0.3,2.1-0.9l3.4-3.4c0.6-0.6,0.2-1.7-0.7-1.7H6c-2.2,0-4,1.8-4,4v28c0,2.2,1.8,4,4,4h28c2.2,0,4-1.8,4-4V26.2C38,25.3,36.9,24.9,36.3,25.5z" />
             </svg>
           </a>
-          <Link to={`/projetos/${p.id}`} href="/projetos/1" className="flex items-center text-[14px] py-2 px-3 rounded-[10px] bg-[#A7A7A7]/20 hover:bg-[#A7A7A7]/25 hover:scale-[1.05] transition-transform duration-200">
+          <Link to={`/projetos/${p.id}`} href="/projetos/1" className="flex items-center text-[12px] sm:text-[14px] py-2 px-3 rounded-[10px] bg-[#A7A7A7]/20 hover:bg-[#A7A7A7]/25 hover:scale-[1.05] transition-transform duration-200">
             Detalhes{" ->"}
           </Link>
         </div>

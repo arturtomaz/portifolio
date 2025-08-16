@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import listaProjetos from "../data/projetos.json";
+import portifolio_data from "../data/portifolio_data.json";
 import Bubbles from "../components/Bubbles";
 import BotaoHero from "../components/BotaoHero";
 import TecnologiaHero from "../components/TecnologiaHero";
@@ -14,7 +14,9 @@ import "swiper/css/autoplay";
 
 function DetalhesProjeto() {
   const { id } = useParams();
-  const p = listaProjetos.projetos.find((proj) => proj.id === parseInt(id, 10));
+  const p = portifolio_data.projetos.find(
+    (proj) => proj.id === parseInt(id, 10)
+  );
   const tecnologias = p.tecnologias || [];
 
   if (!p) {
@@ -26,7 +28,7 @@ function DetalhesProjeto() {
   }
 
   return (
-    <div className="bg-[#060B0A] min-h-screen py-16">
+    <div className="bg-[#060B0A] min-h-screen py-8 md:py-16">
       <Bubbles />
       <div className="container mx-auto px-2 sm:px-4 lg:px-8">
         <div className="text-[12px] md:text-[16px] gap-4 md:gap-8 flex items-center">
@@ -40,11 +42,12 @@ function DetalhesProjeto() {
             Voltar
           </Link>
           <p className="text-[#A7A7A7]">
-            {"Projetos > "}
+            <Link to="/">{"Projetos"}</Link>
+            {" > "}
             <span className="text-[#F8F8F8]">{p.nome}</span>
           </p>
         </div>
-        <div className="mt-12 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className="mt-8 md:mt-12 max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
           {/* Esquerda: Informações do Projeto */}
           <div className="flex-1">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-[#DBEAB5] to-[#CDEB85] text-transparent bg-clip-text">
@@ -91,7 +94,7 @@ function DetalhesProjeto() {
           </div>
 
           {/* Direita: Slider Responsivo */}
-          <div className="flex-1 w-full lg:w-[10%] mt-12 lg:mt-0">
+          <div className="flex-1 w-full lg:w-[10%] md:mt-12 lg:mt-0">
             {p.imagens && p.imagens.length > 0 ? (
               <div className="w-full mx-auto rounded-lg overflow-hidden shadow-2xl shadow-black/30">
                 <Swiper

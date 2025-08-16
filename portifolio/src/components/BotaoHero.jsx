@@ -7,7 +7,7 @@ function BotaoHero({ nome, link, icon, outLink }) {
 
   return (
     <a href={link ? `#${link}` : `${outLink}`} target={link ? undefined : "_blank"} className="gradient-shadow">
-      <h1 className="text-[15px] bg-[#060B0A] rounded-[10px] py-2 px-10 flex justify-center items-center gap-1">
+      <h1 className="text-[15px] bg-[#060B0A] rounded-[10px] py-2 px-6 sm:px-10 flex justify-center items-center gap-1">
         {nome}
         <span
           className="w-[16px]"
