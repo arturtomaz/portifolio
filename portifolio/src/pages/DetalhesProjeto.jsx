@@ -29,7 +29,9 @@ function DetalhesProjeto() {
 
   return (
     <div className="bg-[#060B0A] min-h-screen py-8 md:py-16">
-      <Bubbles />
+      <div className="hidden md:block">
+        <Bubbles />
+      </div>
       <div className="container mx-auto px-2 sm:px-4 lg:px-8">
         <div className="text-[12px] md:text-[16px] gap-4 md:gap-8 flex items-center">
           <Link

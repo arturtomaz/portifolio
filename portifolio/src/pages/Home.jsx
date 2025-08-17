@@ -9,7 +9,9 @@ import Footer from "../sections/Footer";
 function Home() {
   return (
     <div className="bg-[#060B0A] min-h-screen">
-      <Bubbles />
+      <div className="hidden md:block">
+        <Bubbles />
+      </div>
       <Header />
       <main className="relative container mx-auto max-w-[95%]">
         <HeroArea />
