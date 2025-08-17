@@ -2,13 +2,18 @@
   "projetos": [
     {
       "id": 1,
-      "nome": "Portfolio Website",
-      "descricao": "",
-      "tecnologias": ["React"],
-      "deploy": "",
-      "github": "",
+      "nome": "Site Portfólio",
+      "descricao": "Meu portfólio pessoal, criado para apresentar meus projetos, experiências e trajetória profissional de forma clara e moderna. O objetivo é reunir em um só lugar quem eu sou, o que faço e como entrar em contato comigo.",
+      "tecnologias": ["JavaScript", "React", "Vite", "Tailwind CSS", "JSON"],
+      "deploy": "arturtomaz-portifolio.vercel.app",
+      "github": "portifolio",
       "caminho": "portifolio",
-      "imagens": ["home.png"]
+      "imagens": [
+        "home.png",
+        "projects.png",
+        "home-mobile.png",
+        "menu-mobile.png"
+      ]
     },
     {
       "id": 2,
