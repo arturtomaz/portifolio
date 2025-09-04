@@ -31,6 +31,7 @@ function About() {
       <div className="w-[95%] flex flex-col lg:flex-row items-center mt-10 gap-8">
         <div className="flex-2 max-w-[500px] overflow-hidden rounded-full">
           <img
+            lazy="loading"
             className="w-full h-full aspect-square object-cover scale-115"
             src="/quantum-computer.jpg"
             alt=""

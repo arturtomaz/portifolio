@@ -46,7 +46,7 @@ function HeroArea() {
       {/* DIREITA */}
       <div className="z-2 flex-1 h-[100%] mt-[50px]">
         <div className="flex justify-center items-center">
-          <img loading="lazy" className="sm:max-w-[550px]" src="/Main Hero Teste.png" alt="" />
+          <img className="sm:max-w-[550px]" src="/Main Hero Teste.png" alt="" />
         </div>
       </div>
     </section>
