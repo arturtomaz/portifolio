@@ -94,7 +94,23 @@
   "certificados": [
     {
       "id": 1,
+      "nome": "EstagioLSC.jpg"
+    },
+    {
+      "id": 2,
       "nome": "HTML5-CSS3.png"
+    },
+    {
+      "id": 3,
+      "nome": "WEG.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "StartupSummit.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "ConCEJ.jpg"
     }
   ],
   "tecnologias": [
